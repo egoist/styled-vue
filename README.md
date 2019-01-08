@@ -114,7 +114,23 @@ module.exports = {
 
 ### Using with Poi
 
-Guess what, it's the same as Vue CLI :)
+In your `poi.config.js`:
+
+```js
+module.exports = {
+  plugins: ['styled-vue/poi']
+}
+```
+
+### Use with Nuxt
+
+In your `nuxt.config.js`:
+
+```js
+module.exports = {
+  modules: ['styled-vue/nuxt']
+}
+```
 
 ### Using with Nuxt.js
 

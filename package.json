@@ -6,6 +6,7 @@
   "files": [
     "lib",
     "nuxt",
+    "poi",
     "compiler.js"
   ],
   "scripts": {
