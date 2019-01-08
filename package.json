@@ -1,6 +1,6 @@
 {
   "name": "styled-vue",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Zero-runtime CSS-in-JS for Vue.js.",
   "main": "lib/index.js",
   "files": [
