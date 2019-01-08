@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`no css 1`] = `
+Object {
+  "customBlocks": Array [],
+  "script": Object {
+    "attrs": Object {},
+    "content": "export default {};",
+    "end": 104,
+    "start": 81,
+    "type": "script",
+  },
+  "styles": Array [],
+  "template": Object {
+    "attrs": Object {},
+    "content": "
+<h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+",
+    "end": 59,
+    "start": 13,
+    "type": "template",
+  },
+}
+`;
+
+exports[`no vars 1`] = `
+Object {
+  "customBlocks": Array [],
+  "script": Object {
+    "attrs": Object {},
+    "content": "export default {
+  style: undefined
+};",
+    "end": 174,
+    "start": 81,
+    "type": "script",
+  },
+  "styles": Array [
+    Object {
+      "attrs": Object {
+        "lang": "css",
+        "scoped": true,
+      },
+      "content": "h1 {color: red}",
+      "end": 201,
+      "lang": "css",
+      "scoped": true,
+      "start": 186,
+      "type": "style",
+    },
+  ],
+  "template": Object {
+    "attrs": Object {},
+    "content": "
+<h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+",
+    "end": 59,
+    "start": 13,
+    "type": "template",
+  },
+}
+`;
+
+exports[`simple 1`] = `
+Object {
+  "customBlocks": Array [],
+  "script": Object {
+    "attrs": Object {},
+    "content": "export default {
+  style: function (vm, existing) {
+    var v0 = vm => vm.color;
+
+    var v1 = 200 + 1;
+    return Object.assign({
+      \\"--v0\\": v0(vm, existing),
+      \\"--v1\\": v1 + \\"px\\"
+    }, existing);
+  }
+};",
+    "end": 238,
+    "start": 81,
+    "type": "script",
+  },
+  "styles": Array [
+    Object {
+      "attrs": Object {
+        "lang": "css",
+        "scoped": true,
+      },
+      "content": "
+  h1 {
+    color: var(--v0);
+    width: var(--v1);
+  }
+  ",
+      "end": 308,
+      "lang": "css",
+      "scoped": true,
+      "start": 250,
+      "type": "style",
+    },
+  ],
+  "template": Object {
+    "attrs": Object {},
+    "content": "
+<h1 style=\\"foo\\" :style=\\"$options.style(this, {})\\">hello</h1>
+",
+    "end": 59,
+    "start": 13,
+    "type": "template",
+  },
+}
+`;
