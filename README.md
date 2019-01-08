@@ -116,6 +116,8 @@ import { css, less, sass, scss, stylus } from 'styled-vue'
 
 Just use corresponding exports from `styled-vue`.
 
+The CSS will be passed to `vue-loader`, so it really just works like `<style scoped>`.
+
 ### Global Styles
 
 I think you should not do this, but I'm open for other thoughts, let's discuss it in issue tracker if you want this feature.
