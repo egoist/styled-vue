@@ -50,12 +50,15 @@ yarn add styled-vue --dev
 
 <script>
 import { css } from 'styled-vue'
+import { modularScale } from 'polished'
 
 export default {
   style: css`
     .title {
       /* You can access component's "this" via "vm" */
       color: ${vm => vm.$store.state.themeColor};
+      font-size: ${modularScale(2)};
+      margin: 0;
     }
   `
 }

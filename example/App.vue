@@ -10,15 +10,17 @@
 
 <script>
 import { css } from 'styled-vue'
+import { modularScale } from 'polished';
 
 export default {
   style: css`
   #app {
-    background-color: ${vm => vm.theme === 'dark' ? '#000' : 'f0f0f0'};
+    background-color: ${vm => vm.theme === 'dark' ? '#000' : '#f0f0f0'};
     width: ${300}px;
   }
   h1 {
     color: ${vm => vm.color};
+    font-size: ${modularScale(2)};
   }
   ul {
     list-style: square;
