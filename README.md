@@ -122,16 +122,6 @@ module.exports = {
 }
 ```
 
-### Use with Nuxt
-
-In your `nuxt.config.js`:
-
-```js
-module.exports = {
-  modules: ['styled-vue/nuxt']
-}
-```
-
 ### Using with Nuxt.js
 
 In your `nuxt.config.js`:
