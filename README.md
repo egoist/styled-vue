@@ -26,6 +26,7 @@
   - [Use with webpack](#use-with-webpack)
   - [Use with Vue CLI](#use-with-vue-cli)
   - [Use with Poi](#use-with-poi)
+  - [How does it work](#how-does-it-work)
   - [CSS Preprocessors](#css-preprocessors)
   - [Global Styles](#global-styles)
   - [TypeScript](#typescript)
@@ -114,15 +115,68 @@ module.exports = {
 
 Guess what, it's the same as Vue CLI :)
 
+### How does it work
+
+Input:
+
+```vue
+<template>
+  <h1>hello</h1>
+</template>
+
+<script>
+import { css } from 'styled-vue'
+
+export default {
+  style: css`
+    h1 {
+      color: ${vm => vm.color};
+      width: ${200 + 1}px;
+    }
+  `
+}
+</script>
+```
+
+Output:
+
+```vue
+<template>
+  <h1 :style="$options.style(this)">hello</h1>
+</template>
+
+<script>
+export default {
+  style: function(vm) {
+    var v0 = vm => vm.color
+    var v1 = 200 + 1
+    return {
+      '--v0': v0(vm),
+      '--v1': v1 + 'px'
+    }
+  }
+}
+</script>
+
+<style scoped>
+h1 {
+  color: var(--v0);
+  width: var(--v1);
+}
+</style>
+```
+
+What a trick... It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) for dynamic styles, that's why this feature is not supported in IE.
+
 ### CSS Preprocessors
 
 ```js
-import { css, less, sass, scss, stylus } from 'styled-vue'
+import { less, sass, scss, stylus } from 'styled-vue'
 ```
 
 Just use corresponding exports from `styled-vue`.
 
-The CSS will be passed to `vue-loader`, so it really just works like `<style scoped>`.
+The CSS will be passed to `vue-loader` and parsed by PostCSS if a `postcss.config.js` exists in your project, so it really just works like `<style scoped>`.
 
 ### Global Styles
 
