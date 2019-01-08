@@ -73,7 +73,7 @@
       "prettier --write",
       "git add"
     ],
-    "*.{json,md}": [
+    "*.{json,md,vue}": [
       "prettier --write",
       "git add"
     ]
