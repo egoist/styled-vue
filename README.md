@@ -23,9 +23,10 @@
 - [Install](#install)
 - [Example](#example)
 - [How to use](#how-to-use)
-  - [Use with webpack](#use-with-webpack)
-  - [Use with Vue CLI](#use-with-vue-cli)
-  - [Use with Poi](#use-with-poi)
+  - [Using with webpack](#using-with-webpack)
+  - [Using with Vue CLI](#using-with-vue-cli)
+  - [Using with Poi](#using-with-poi)
+  - [Using with Nuxt.js](#using-with-nuxtjs)
   - [How does it work](#how-does-it-work)
   - [CSS Preprocessors](#css-preprocessors)
   - [Global Styles](#global-styles)
@@ -73,7 +74,7 @@ And that's it, it's like writing `.vue` file's scoped CSS in the `<script>` tag.
 
 ## How to use
 
-### Use with webpack
+### Using with webpack
 
 I did say that `styled-vue` works without config, that might be a clickbait because you do need a single line of config in your `webpack.config.js`:
 
@@ -93,7 +94,7 @@ module.exports = {
 }
 ```
 
-### Use with Vue CLI
+### Using with Vue CLI
 
 In your `vue.config.js`:
 
@@ -111,9 +112,19 @@ module.exports = {
 }
 ```
 
-### Use with Poi
+### Using with Poi
 
 Guess what, it's the same as Vue CLI :)
+
+### Using with Nuxt.js
+
+In your `nuxt.config.js`:
+
+```js
+export default {
+  modules: ['styled-vue/nuxt']
+}
+```
 
 ### How does it work
 
