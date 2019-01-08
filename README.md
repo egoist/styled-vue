@@ -26,6 +26,7 @@
   - [Use with webpack](#use-with-webpack)
   - [Use with Vue CLI](#use-with-vue-cli)
   - [Use with Poi](#use-with-poi)
+  - [Using with Nuxt.js](#using-with-nuxtjs)
   - [How does it work](#how-does-it-work)
   - [CSS Preprocessors](#css-preprocessors)
   - [Global Styles](#global-styles)
@@ -114,6 +115,16 @@ module.exports = {
 ### Use with Poi
 
 Guess what, it's the same as Vue CLI :)
+
+### Using with Nuxt.js
+
+In your `nuxt.config.js`:
+
+```js
+export default {
+  modules: ['styled-vue/nuxt']
+}
+```
 
 ### How does it work
 
