@@ -1,4 +1,6 @@
-# styled-vue
+![styled-vue](https://user-images.githubusercontent.com/8784712/50833110-30b41180-138b-11e9-9ddd-20af6afc1747.png)
+
+---
 
 [![NPM version](https://badgen.net/npm/v/styled-vue)](https://npmjs.com/package/styled-vue) [![NPM downloads](https://badgen.net/npm/dm/styled-vue)](https://npmjs.com/package/styled-vue) [![CircleCI](https://badgen.net/circleci/github/egoist/styled-vue/master)](https://circleci.com/gh/egoist/styled-vue/tree/master) [![donate](https://badgen.net/badge/support%20me/donate/ff69b4)](https://patreon.com/egoist) [![chat](https://badgen.net/badge/chat%20on/discord/7289DA)](https://chat.egoist.moe)
 
