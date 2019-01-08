@@ -28,6 +28,7 @@
   - [Use with Poi](#use-with-poi)
   - [CSS Preprocessors](#css-preprocessors)
   - [Global Styles](#global-styles)
+  - [TypeScript](#typescript)
 - [Editor Plugins](#editor-plugins)
   - [VSCode](#vscode)
   - [Atom](#atom)
@@ -126,6 +127,10 @@ The CSS will be passed to `vue-loader`, so it really just works like `<style sco
 ### Global Styles
 
 I think you should not do this, but I'm open for other thoughts, let's discuss it in issue tracker if you want this feature.
+
+### TypeScript
+
+We use Babel to parse your code, so TypeScript should work out-of-the-box, however there're some [caveats](https://babeljs.io/docs/en/babel-plugin-transform-typescript#caveats).
 
 ## Editor Plugins
 
