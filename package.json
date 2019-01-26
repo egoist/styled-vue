@@ -42,6 +42,7 @@
     "poi": "^12.2.14",
     "polished": "^2.3.1",
     "prettier": "^1.15.2",
+    "semantic-release": "^15.13.3",
     "vue": "^2.5.21",
     "xo": "^0.23.0"
   },
@@ -79,5 +80,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "release": {
+    "branch": "master"
   }
 }
