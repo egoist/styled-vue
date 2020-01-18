@@ -55,7 +55,7 @@ import { StyledVue } from 'styled-vue'
 Vue.use(StyledVue)
 ```
 
-So far the plugin is only required for [globalStyle](#globalstyle), if you only need scoped style, you can safely skip this.
+So far the plugin is only required for [globalStyle](#global-styles), if you only need scoped style, you can safely skip this.
 
 ## Example
 
