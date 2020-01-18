@@ -211,7 +211,7 @@ export default {
 }
 ```
 
-Note CSS variables can only apply to current component and child components, so if you are trying to use them on parent selector like `body`, they **WON'T** work! Currently there's no easy way to fix this.
+Note CSS variables (dynamic value) can only apply to current component and child components, so if you are trying to use them on parent selector like `body`, they **WON'T** work! Currently there's no easy way to fix this.
 
 ### TypeScript
 
