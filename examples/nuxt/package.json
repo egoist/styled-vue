@@ -5,6 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "nuxt": "^2.11.0",
-    "styled-vue": "^0.3.1"
+    "styled-vue": "^0.3.2"
   }
 }

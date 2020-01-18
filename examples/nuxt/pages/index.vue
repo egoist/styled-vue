@@ -19,6 +19,7 @@ export default {
     }
     p {
       color: #999;
+      background: ${vm => vm.textBg};
     }
   `,
   globalStyle: css`
@@ -28,7 +29,8 @@ export default {
   `,
   data() {
     return {
-      bg: 'cyan'
+      bg: 'cyan',
+      textBg: 'red'
     }
   }
 }
