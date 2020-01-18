@@ -13,7 +13,7 @@
     "test": "npm run lint && jest",
     "lint": "xo",
     "toc": "markdown-toc README.md -i",
-    "example": "poi --config example/poi.config.js -so"
+    "example": "poi --config example/poi.config.js -s"
   },
   "repository": {
     "url": "egoist/styled-vue",
@@ -27,7 +27,7 @@
     "@babel/traverse": "^7.2.3",
     "@babel/types": "^7.2.2",
     "posthtml": "^0.11.3",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
     "commitizen": "^3.0.5",
@@ -39,11 +39,11 @@
     "jest": "^23.6.0",
     "lint-staged": "^7.2.0",
     "markdown-toc": "^1.2.0",
-    "poi": "^12.2.14",
+    "poi": "^12.7.5",
     "polished": "^2.3.1",
     "prettier": "^1.15.2",
     "semantic-release": "^15.13.3",
-    "vue": "^2.5.21",
+    "vue": "^2.6.11",
     "xo": "^0.23.0"
   },
   "xo": {

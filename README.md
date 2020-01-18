@@ -183,7 +183,7 @@ h1 {
 </style>
 ```
 
-What a trick... It uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) for dynamic styles, that's why this feature is not supported in IE.
+Under the hood, it uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) for dynamic styles, that's why this feature is not supported in IE.
 
 ### CSS Preprocessors
 
@@ -197,7 +197,19 @@ The CSS will be passed to `vue-loader` and parsed by PostCSS if a `postcss.confi
 
 ### Global Styles
 
-I think you should not do this, but I'm open for other thoughts, let's discuss it in issue tracker if you want this feature.
+Use `globalStyle` instead of `style` on your component:
+
+```js
+import { css } from 'styled-vue'
+
+export default {
+  globalStyle: css`
+    body {
+      color: ${vm => vm.bodyColor};
+    }
+  `
+}
+```
 
 ### TypeScript
 

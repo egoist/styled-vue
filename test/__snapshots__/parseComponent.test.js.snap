@@ -1,113 +1,269 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`no css 1`] = `
-Object {
-  "customBlocks": Array [],
-  "script": Object {
-    "attrs": Object {},
-    "content": "export default {};",
-    "end": 104,
-    "start": 81,
-    "type": "script",
-  },
-  "styles": Array [],
-  "template": Object {
-    "attrs": Object {},
-    "content": "
-<h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
-",
-    "end": 59,
-    "start": 13,
-    "type": "template",
-  },
+exports[`global style 1`] = `
+"
+  === source ===
+  
+<template>
+<h1>hello</h1>
+</template>
+<script>
+import { css } from 'styled-vue'
+export default {
+  globalStyle: css\`h1 {color: red}\`
 }
+</script>
+
+
+  === output ===
+  
+  <template>
+  
+<h1>hello</h1>
+
+  </template>
+
+  <script>
+  export default {
+  globalStyle: undefined // No CSS variables
+
+};
+  </script>
+
+  
+  <style scoped=\\"undefined\\" lang=\\"undefined\\">
+  h1 {color: red}
+  </style>
+  
+  
+  "
+`;
+
+exports[`global style with scoped style 1`] = `
+"
+  === source ===
+  
+<template>
+<h1>hello</h1>
+</template>
+<script>
+import { css } from 'styled-vue'
+export default {
+  style: css\`h1 {color: cyan}\`,
+  globalStyle: css\`h1 {color: red}\`
+}
+</script>
+
+
+  === output ===
+  
+  <template>
+  
+<h1>hello</h1>
+
+  </template>
+
+  <script>
+  export default {
+  style: undefined // No CSS variables
+  ,
+  globalStyle: undefined // No CSS variables
+
+};
+  </script>
+
+  
+  <style scoped=\\"undefined\\" lang=\\"undefined\\">
+  h1 {color: red}
+  </style>
+  
+
+  <style scoped=\\"true\\" lang=\\"css\\">
+  h1 {color: cyan}
+  </style>
+  
+  
+  "
+`;
+
+exports[`global style with scoped style with css variables 1`] = `
+"
+  === source ===
+  
+<template>
+<h1>hello</h1>
+</template>
+<script>
+import { css } from 'styled-vue'
+export default {
+  style: css\`h1 {color: cyan}\`,
+  globalStyle: css\`h1 {color: red; font-size: \${vm => vm.fontSize};}\`
+}
+</script>
+
+
+  === output ===
+  
+  <template>
+  
+<h1 :style=\\"$options._getCssVariables(this, $options, undefined)\\">hello</h1>
+
+  </template>
+
+  <script>
+  export default {
+  style: undefined // No CSS variables
+  ,
+  globalStyle: function (vm, existing) {
+    var gv0 = vm => vm.fontSize;
+
+    return {
+      \\"--gv0\\": gv0(vm)
+    };
+  },
+  _getCssVariables: function (vm, options, existing) {
+    return [existing, options.globalStyle && options.globalStyle(vm), options.style && options.style(vm)];
+  }
+};
+  </script>
+
+  
+  <style scoped=\\"undefined\\" lang=\\"undefined\\">
+  h1 {color: red; font-size: var(--gv0);}
+  </style>
+  
+
+  <style scoped=\\"true\\" lang=\\"css\\">
+  h1 {color: cyan}
+  </style>
+  
+  
+  "
+`;
+
+exports[`no css 1`] = `
+"
+  === source ===
+  
+<template>
+  <h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+</template>
+<script>
+export default {}
+</script>
+
+
+  === output ===
+  
+  <template>
+  
+<h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+
+  </template>
+
+  <script>
+  export default {};
+  </script>
+
+  
+  
+  "
 `;
 
 exports[`no vars 1`] = `
-Object {
-  "customBlocks": Array [],
-  "script": Object {
-    "attrs": Object {},
-    "content": "export default {
-  style: undefined
-};",
-    "end": 174,
-    "start": 81,
-    "type": "script",
-  },
-  "styles": Array [
-    Object {
-      "attrs": Object {
-        "lang": "css",
-        "scoped": true,
-      },
-      "content": "h1 {color: red}",
-      "end": 201,
-      "lang": "css",
-      "scoped": true,
-      "start": 186,
-      "type": "style",
-    },
-  ],
-  "template": Object {
-    "attrs": Object {},
-    "content": "
-<h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
-",
-    "end": 59,
-    "start": 13,
-    "type": "template",
-  },
+"
+  === source ===
+  
+<template>
+  <h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+</template>
+<script>
+import { css } from 'styled-vue'
+export default {
+  style: css\`h1 {color: red}\`
 }
+</script>
+
+
+  === output ===
+  
+  <template>
+  
+<h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+
+  </template>
+
+  <script>
+  export default {
+  style: undefined // No CSS variables
+
+};
+  </script>
+
+  
+  <style scoped=\\"true\\" lang=\\"css\\">
+  h1 {color: red}
+  </style>
+  
+  
+  "
 `;
 
 exports[`simple 1`] = `
-Object {
-  "customBlocks": Array [],
-  "script": Object {
-    "attrs": Object {},
-    "content": "export default {
+"
+  === source ===
+  
+  <template>
+    <h1 style=\\"foo\\" :style=\\"{}\\">hello</h1>
+  </template>
+  <script>
+  import { css } from 'styled-vue'
+  export default {
+    style: css\`
+    h1 {
+      color: \${vm => vm.color};
+      width: \${200 + 1}px;
+    }
+    \`
+  }
+  </script>
+  
+
+  === output ===
+  
+  <template>
+  
+<h1 style=\\"foo\\" :style=\\"$options._getCssVariables(this, $options, {})\\">hello</h1>
+
+  </template>
+
+  <script>
+  export default {
   style: function (vm, existing) {
     var v0 = vm => vm.color;
 
     var v1 = 200 + 1;
-    return Object.assign({
-      \\"--v0\\": v0(vm, existing),
+    return {
+      \\"--v0\\": v0(vm),
       \\"--v1\\": v1 + \\"px\\"
-    }, existing);
-  }
-};",
-    "end": 238,
-    "start": 81,
-    "type": "script",
+    };
   },
-  "styles": Array [
-    Object {
-      "attrs": Object {
-        "lang": "css",
-        "scoped": true,
-      },
-      "content": "
+  _getCssVariables: function (vm, options, existing) {
+    return [existing, options.globalStyle && options.globalStyle(vm), options.style && options.style(vm)];
+  }
+};
+  </script>
+
+  
+  <style scoped=\\"true\\" lang=\\"css\\">
+  
   h1 {
     color: var(--v0);
     width: var(--v1);
   }
-  ",
-      "end": 308,
-      "lang": "css",
-      "scoped": true,
-      "start": 250,
-      "type": "style",
-    },
-  ],
-  "template": Object {
-    "attrs": Object {},
-    "content": "
-<h1 style=\\"foo\\" :style=\\"$options.style(this, {})\\">hello</h1>
-",
-    "end": 59,
-    "start": 13,
-    "type": "template",
-  },
-}
+  
+  </style>
+  
+  
+  "
 `;

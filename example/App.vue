@@ -12,7 +12,14 @@
 import { css } from 'styled-vue'
 import { modularScale } from 'polished'
 
+const border = `10px solid pink`
+
 export default {
+  globalStyle: css`
+    #app {
+      border: ${border};
+    }
+  `,
   style: css`
     #app {
       background-color: ${vm => (vm.theme === 'dark' ? '#000' : '#f0f0f0')};
