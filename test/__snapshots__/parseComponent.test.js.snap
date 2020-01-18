@@ -115,10 +115,10 @@ export default {
   style: undefined // No CSS variables
   ,
   globalStyle: function (vm) {
-    var gv0 = vm => vm.fontSize;
+    var v3b73e5fa = vm => vm.fontSize;
 
     return {
-      \\"--gv0\\": gv0(vm)
+      \\"--v3b73e5fa\\": v3b73e5fa(vm)
     };
   }
 };
@@ -126,7 +126,7 @@ export default {
 
   
   <style scoped=\\"undefined\\" lang=\\"css\\">
-  h1 {color: red; font-size: var(--gv0);}
+  h1 {color: red; font-size: var(--v3b73e5fa);}
   </style>
   
 
@@ -237,12 +237,12 @@ exports[`simple 1`] = `
   <script>
   export default {
   style: function (vm, existing) {
-    var v0 = vm => vm.color;
+    var v6f754d6e = vm => vm.color;
 
-    var v1 = 200 + 1;
+    var v447fa43e = 200 + 1;
     return [existing, {
-      \\"--v0\\": v0(vm),
-      \\"--v1\\": v1 + \\"px\\"
+      \\"--v6f754d6e\\": v6f754d6e(vm),
+      \\"--v447fa43e\\": v447fa43e + \\"px\\"
     }];
   }
 };
@@ -252,8 +252,8 @@ exports[`simple 1`] = `
   <style scoped=\\"true\\" lang=\\"css\\">
   
   h1 {
-    color: var(--v0);
-    width: var(--v1);
+    color: var(--v6f754d6e);
+    width: var(--v447fa43e);
   }
   
   </style>
