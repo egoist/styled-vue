@@ -31,6 +31,7 @@ export default {
     }
     ul {
       list-style: square;
+      color: ${vm => vm.color};
     }
   `,
   data() {
