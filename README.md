@@ -231,6 +231,8 @@ import { StyledVue } from 'styled-vue'
 Vue.use(StyledVue)
 ```
 
+<small>For Nuxt users we automatically register it for you.</small>
+
 This only adds ~100 bytes to your application.
 
 ### TypeScript
