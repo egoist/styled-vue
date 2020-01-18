@@ -16,7 +16,7 @@ const border = `10px solid pink`
 
 export default {
   globalStyle: css`
-    #app {
+    body {
       border: ${border};
     }
   `,

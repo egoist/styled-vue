@@ -31,7 +31,7 @@ export default {
   </script>
 
   
-  <style scoped=\\"undefined\\" lang=\\"undefined\\">
+  <style scoped=\\"undefined\\" lang=\\"css\\">
   h1 {color: red}
   </style>
   
@@ -73,7 +73,7 @@ export default {
   </script>
 
   
-  <style scoped=\\"undefined\\" lang=\\"undefined\\">
+  <style scoped=\\"undefined\\" lang=\\"css\\">
   h1 {color: red}
   </style>
   
@@ -106,7 +106,7 @@ export default {
   
   <template>
   
-<h1 :style=\\"$options._getCssVariables(this, $options, undefined)\\">hello</h1>
+<h1><styled-vue-global-css></styled-vue-global-css>hello</h1>
 
   </template>
 
@@ -114,21 +114,18 @@ export default {
   export default {
   style: undefined // No CSS variables
   ,
-  globalStyle: function (vm, existing) {
+  globalStyle: function (vm) {
     var gv0 = vm => vm.fontSize;
 
     return {
       \\"--gv0\\": gv0(vm)
     };
-  },
-  _getCssVariables: function (vm, options, existing) {
-    return [existing, options.globalStyle && options.globalStyle(vm), options.style && options.style(vm)];
   }
 };
   </script>
 
   
-  <style scoped=\\"undefined\\" lang=\\"undefined\\">
+  <style scoped=\\"undefined\\" lang=\\"css\\">
   h1 {color: red; font-size: var(--gv0);}
   </style>
   
@@ -233,7 +230,7 @@ exports[`simple 1`] = `
   
   <template>
   
-<h1 style=\\"foo\\" :style=\\"$options._getCssVariables(this, $options, {})\\">hello</h1>
+<h1 style=\\"foo\\" :style=\\"$options.style(this, {})\\">hello</h1>
 
   </template>
 
@@ -243,13 +240,10 @@ exports[`simple 1`] = `
     var v0 = vm => vm.color;
 
     var v1 = 200 + 1;
-    return {
+    return [existing, {
       \\"--v0\\": v0(vm),
       \\"--v1\\": v1 + \\"px\\"
-    };
-  },
-  _getCssVariables: function (vm, options, existing) {
-    return [existing, options.globalStyle && options.globalStyle(vm), options.style && options.style(vm)];
+    }];
   }
 };
   </script>

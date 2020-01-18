@@ -46,6 +46,17 @@
 yarn add styled-vue --dev
 ```
 
+Then register the Vue plugin (**optional**):
+
+```js
+import Vue from 'vue'
+import { StyledVue } from 'styled-vue'
+
+Vue.use(StyledVue)
+```
+
+So far the plugin is only required for [globalStyle](#globalstyle), if you only need scoped style, you can safely skip this.
+
 ## Example
 
 ```vue
@@ -204,14 +215,23 @@ import { css } from 'styled-vue'
 
 export default {
   globalStyle: css`
-    #app {
+    body {
       color: ${vm => vm.bodyColor};
     }
   `
 }
 ```
 
-Note CSS variables (dynamic value) can only apply to current component and child components, so if you are trying to use them on parent selector like `body`, they **WON'T** work! Currently there's no easy way to fix this.
+`globalStyle` relies on the Vue plugin, make sure the register it first:
+
+```js
+import Vue from 'vue'
+import { StyledVue } from 'styled-vue'
+
+Vue.use(StyledVue)
+```
+
+This only adds ~100 bytes to your application.
 
 ### TypeScript
 

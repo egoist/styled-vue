@@ -10,5 +10,7 @@ module.exports = {
         options.compiler = require('../compiler')
         return options
       })
+
+    config.resolve.alias.set('styled-vue', path.join(__dirname, '../lib'))
   }
 }
