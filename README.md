@@ -204,12 +204,14 @@ import { css } from 'styled-vue'
 
 export default {
   globalStyle: css`
-    body {
+    #app {
       color: ${vm => vm.bodyColor};
     }
   `
 }
 ```
+
+Note CSS variables can only apply to current component and child components, so if you are trying to use them on parent selector like `body`, they **WON'T** work! Currently there's no easy way to fix this.
 
 ### TypeScript
 
