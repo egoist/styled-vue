@@ -4,7 +4,7 @@
 
 [![NPM version](https://flat.badgen.net/npm/v/styled-vue?scale=1.5)](https://npmjs.com/package/styled-vue) [![NPM downloads](https://flat.badgen.net/npm/dm/styled-vue?scale=1.5)](https://npmjs.com/package/styled-vue) [![CircleCI](https://flat.badgen.net/circleci/github/egoist/styled-vue/master?scale=1.5)](https://circleci.com/gh/egoist/styled-vue/tree/master) [![chat](https://flat.badgen.net/badge/chat%20on/discord/7289DA?scale=1.5)](https://chat.egoist.sh)
 
-**Please consider [donating](https://www.patreon.com/egoist) to this project's author, [EGOIST](#author), to show your ❤️ and support.**
+**Please consider [donating](https://github.com/sponsors/egoist) to this project's author, [EGOIST](#author), to show your ❤️ and support.**
 
 ## Features
 
