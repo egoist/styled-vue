@@ -59,7 +59,8 @@
       "jest"
     ],
     "rules": {
-      "unicorn/filename-case": "off"
+      "unicorn/filename-case": "off",
+      "unicorn/no-abusive-eslint-disable": "off"
     }
   },
   "husky": {
