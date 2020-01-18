@@ -2,7 +2,7 @@
   <div>
     <h1>Hello Nuxt</h1>
     <h2>And hello styled-vue</h2>
-    <p>This is awesome!</p>
+    <p>This is awesome! (maybe)</p>
   </div>
 </template>
 
@@ -17,10 +17,6 @@ export default {
     h2 {
       font-style: italic;
     }
-    p {
-      color: #999;
-      background: ${vm => vm.textBg};
-    }
   `,
   globalStyle: css`
     body {
@@ -29,8 +25,7 @@ export default {
   `,
   data() {
     return {
-      bg: 'cyan',
-      textBg: 'red'
+      bg: 'cyan'
     }
   }
 }
