@@ -222,7 +222,7 @@ export default {
 }
 ```
 
-`globalStyle` relies on the Vue plugin, make sure the register it first:
+`globalStyle` relies on the Vue plugin, make sure to register it first:
 
 ```js
 import Vue from 'vue'
