@@ -2,7 +2,7 @@
 
 ---
 
-[![NPM version](https://badgen.net/npm/v/styled-vue)](https://npmjs.com/package/styled-vue) [![NPM downloads](https://badgen.net/npm/dm/styled-vue)](https://npmjs.com/package/styled-vue) [![CircleCI](https://badgen.net/circleci/github/egoist/styled-vue/master)](https://circleci.com/gh/egoist/styled-vue/tree/master) [![donate](https://badgen.net/badge/support%20me/donate/ff69b4)](https://patreon.com/egoist) [![chat](https://badgen.net/badge/chat%20on/discord/7289DA)](https://chat.egoist.moe)
+[![NPM version](https://flat.badgen.net/npm/v/styled-vue?scale=1.5)](https://npmjs.com/package/styled-vue) [![NPM downloads](https://flat.badgen.net/npm/dm/styled-vue?scale=1.5)](https://npmjs.com/package/styled-vue) [![CircleCI](https://flat.badgen.net/circleci/github/egoist/styled-vue/master?scale=1.5)](https://circleci.com/gh/egoist/styled-vue/tree/master) [![chat](https://flat.badgen.net/badge/chat%20on/discord/7289DA?scale=1.5)](https://chat.egoist.sh)
 
 **Please consider [donating](https://www.patreon.com/egoist) to this project's author, [EGOIST](#author), to show your ❤️ and support.**
 
